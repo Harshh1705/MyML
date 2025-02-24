@@ -6,41 +6,58 @@
     <link href="./output.css" rel="stylesheet">
     <title>MyML</title>
 </head>
-<body class="h-screen w-screen bg-[#ff5733] font-mono">
-    <div class="border-black border-4 p-6 flex justify-between bg-[#334bff] text-black shadow-[8px_8px_0px_rgba(0,0,0,1)]">
-        <p class="text-lg bg-white border-4 px-6 py-2">MyML</p>
-        <div class="flex space-x-4">
-            <a class="bg-white border-4 px-4 py-2 shadow-[5px_5px_0px_rgba(0,0,0,1)]" href="components/blogs.html">ML Blogs</a>
-            <a class="bg-white border-4 px-4 py-2 shadow-[5px_5px_0px_rgba(0,0,0,1)]" href="#">Papers</a>
-            <a class="bg-white border-4 px-4 py-2 shadow-[5px_5px_0px_rgba(0,0,0,1)]" href="#">Resources</a>
-            <a class="bg-white border-4 px-4 py-2 shadow-[5px_5px_0px_rgba(0,0,0,1)]" href="#">GitHub</a>
+<body class="min-h-screen w-screen bg-[#ffcc00] font-mono overflow-x-hidden">
+    <div class="border-black border-4 p-4 md:p-6 flex justify-between bg-[#ff5733] text-black shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+        <a class="text-lg bg-white border-4 px-6 py-2" href="index.html">MyML</a>
+        
+        <!-- Burger Menu Button (Mobile Only) -->
+        <button id="burger-btn" class="md:hidden bg-white border-4 px-4 py-2">
+            ☰
+        </button>
+
+        <!-- Navigation Links -->
+        <div id="nav-links" class="hidden md:flex md:space-x-4 absolute md:relative left-0 right-0 top-[80px] md:top-0 bg-[#ff5733] md:bg-transparent p-4 md:p-0 border-black border-b-4 md:border-0">
+            <a class="bg-white border-4 px-4 py-2 shadow-[5px_5px_0px_rgba(0,0,0,1)] block md:inline-block mb-2 md:mb-0 text-center" href="components/blogs.html">ML Blogs</a>
+            <a class="bg-white border-4 px-4 py-2 shadow-[5px_5px_0px_rgba(0,0,0,1)] block md:inline-block mb-2 md:mb-0 text-center" href="components/papers.html">Papers</a>
+            <a class="bg-white border-4 px-4 py-2 shadow-[5px_5px_0px_rgba(0,0,0,1)] block md:inline-block mb-2 md:mb-0 text-center" href="components/resources.html">Resources</a>
+            <a class="bg-white border-4 px-4 py-2 shadow-[5px_5px_0px_rgba(0,0,0,1)] block md:inline-block text-center" href="https://github.com/Harshh1705/MyML">GitHub</a>
         </div>
     </div>
 
-    <div class="flex mt-12 space-x-12 px-12">
+    <div class="flex flex-col md:flex-row mt-8 md:mt-12 space-y-6 md:space-y-0 md:space-x-12 px-4 md:px-12">
         <!-- Left Content -->
-        <div class="flex-1 bg-white border-4 border-black p-6 shadow-[10px_10px_0px_rgba(0,0,0,1)]">
-            <h1 class="text-3xl font-bold">Hi, welcome to MyML!</h1>
-            <p class="mt-4">I'm Harsh and this site is a collection of all the ML work I'll be working on :)</p>
-            <p class="mt-4">You can find the research papers I've implemented, also my blogs and my projects.</p>
-            <p class="mt-4">I'll also be adding resources that I use over here!</p>
+        <div class="flex-1 bg-white border-4 border-black p-6 md:p-12 shadow-[10px_10px_0px_rgba(0,0,0,1)]">
+            <h1 class="text-2xl md:text-3xl font-bold">Hi, welcome to MyML!</h1>
+            <p class="mt-4 text-lg md:text-xl">I'm Harsh and this site is a collection of all the Machine Learning stuff I'll be working on :)</p>
+            <p class="mt-4 text-lg md:text-xl">You can find the research papers I've implemented, also my blogs and my projects.</p>
+            <p class="mt-4 text-lg md:text-xl">I'll also be adding resources that I use over here!</p>
         </div>
-
+    
         <!-- Right Content -->
-        <div class="flex-1 bg-[#6dff33] border-4 border-black p-6 shadow-[10px_10px_0px_rgba(0,0,0,1)] text-black">
-            <h1 class="text-2xl font-bold">Here's what I'm currently working on :)</h1>
-            <p class="mt-4">- Diving into CV and implementing papers on it</p>
-            <p class="mt-4">- Also application-based projects soon</p>
+        <div class="flex-1 md:flex-[0.5] container bg-[#6d7df1] border-4 border-black p-4 md:p-6 shadow-[10px_10px_0px_rgba(0,0,0,1)] text-black">
+            <h1 class="text-xl md:text-2xl font-bold">Here's what I'm currently working on :)</h1>
+            <p class="mt-4 text-base md:text-lg">- Diving into CV and implementing papers on it</p>
+            <p class="mt-4 text-base md:text-lg">- Also application-based projects soon</p>
         </div>
     </div>
+    
+    <div class="mt-8 md:mt-16 flex flex-col md:flex-row justify-center items-center gap-4 md:space-x-6 px-4">
+        <a href="https://github.com/Harshh1705" target="_blank" class="w-full md:w-auto bg-black text-white px-6 py-3 border-4 border-black shadow-[5px_5px_0px_rgba(0,0,0,1)] text-center">
+            GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/harsh-trivedi-4038742b0" target="_blank" class="w-full md:w-auto bg-blue-600 text-white px-6 py-3 border-4 border-black shadow-[5px_5px_0px_rgba(0,0,0,1)] text-center">
+            LinkedIn
+        </a>
+        
+    </div>
+
+    <script>
+        const burgerBtn = document.getElementById('burger-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        burgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
-
-<!-- 
-fonts colors for navbar
-bg-[#ff5733] 
-
-fonts colors for main bod
-bg-[#ffcc00]
-
--->
